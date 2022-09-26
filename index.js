@@ -1,6 +1,6 @@
-import Book from './modules/bookClass.js';
-import Storage from './modules/storage.js';
 import bookHTML from './modules/bookHTML.js';
+import addBooks from './modules/addBook.js';
+import Time from './modules/time.js';
 
 const showListButton = document.getElementById('show-list');
 const addNewButton = document.getElementById('add-new');
@@ -44,13 +44,16 @@ showContactButton.addEventListener('click', () => {
 const form = document.getElementById('book-form');
 form.addEventListener('submit', (event) => {
   event.preventDefault();
-  const title = document.getElementById('book-title').value;
-  const author = document.getElementById('book-author').value;
-  const book = new Book(title, author);
-  Storage.addBook(book);
+  addBooks();
   bookHTML();
   form.reset();
 });
 
+const systemDate = document.getElementById('date');
+systemDate.innerHTML = Time.getDate();
+const setTime = () => {
+  systemDate.innerHTML = Time.getDate();
+};
+setInterval(setTime, 1000);
 // Display Books Event
 bookHTML();
