@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Plain Repository</title>
+    <title>AwesomeBookApplicationES6</title>
 </head>
 <body>
     <nav>
@@ -25,9 +25,9 @@
         </table>   
     </section>      
     <section id="form">
-        <form class="form" id="book-form">
+        <form method="get" class="form" id="book-form">
             <h2>Add a new book</h2>
-            <input type="text" name="title" id="book-title" onchange="capitalize(this)" placeholder="Title" required maxlength="30">
+            <input type="text" name="title" id="book-title" placeholder="Title" required maxlength="100">
             <input type="text" name="author" id="book-author" maxlength="30" placeholder="Author" required>
             <button type="submit" id="add-book">Add</button>
         </form>
@@ -44,6 +44,6 @@
     <footer>
         <p>Copyright       ...</p>
     </footer>
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
 </body>
 </html>
