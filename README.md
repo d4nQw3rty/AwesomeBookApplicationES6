@@ -36,7 +36,7 @@ Not available
 
 ### Setup
 ```
-$git clone git@github.com:d4nQw3rty/Books-Application.git
+git@github.com:d4nQw3rty/AwesomeBookApplicationES6.git
 ```
 ## Authors
 
