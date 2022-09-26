@@ -2,7 +2,6 @@ import Book from './modules/bookClass.js';
 import Storage from './modules/storage.js';
 import bookHTML from './modules/bookHTML.js';
 
-
 const showListButton = document.getElementById('show-list');
 const addNewButton = document.getElementById('add-new');
 const showContactButton = document.getElementById('show-contact');
@@ -11,7 +10,7 @@ const sectionList = document.getElementById('list');
 const sectionForm = document.getElementById('form');
 const sectionContact = document.getElementById('contact');
 
-//Navigation Events
+// Navigation Events
 
 addNewButton.addEventListener('click', () => {
   sectionForm.style.display = 'flex';
@@ -40,7 +39,7 @@ showContactButton.addEventListener('click', () => {
   addNewButton.style.color = 'black';
 });
 
-//Add Book Event
+// Add Book Event
 
 const form = document.getElementById('book-form');
 form.addEventListener('submit', (event) => {
@@ -51,8 +50,7 @@ form.addEventListener('submit', (event) => {
   Storage.addBook(book);
   bookHTML();
   form.reset();
-
 });
 
-//Display Books Event
+// Display Books Event
 bookHTML();

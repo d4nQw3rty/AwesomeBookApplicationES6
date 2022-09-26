@@ -1,7 +1,6 @@
 import removeBook from './removeBook.js';
 import Storage from './storage.js';
 
-  
 const getBooks = () => Storage.getBooks();
 const bookHTML = () => {
   const books = getBooks();
@@ -24,11 +23,12 @@ const bookHTML = () => {
     remove.innerHTML = 'Remove';
     remove.addEventListener('click', () => {
       removeBook(index);
+      bookHTML();
     });
-    
+
     bookDiv.appendChild(remove);
     list.appendChild(bookDiv);
   });
-}
+};
 
 export default bookHTML;
